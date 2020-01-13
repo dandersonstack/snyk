@@ -1,0 +1,25 @@
+{
+  "name": "synk-interview-prep",
+  "version": "1.0.0",
+  "description": "Hi Guys,",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandersonstack/snyk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dandersonstack/snyk/issues"
+  },
+  "homepage": "https://github.com/dandersonstack/snyk#readme"
+}

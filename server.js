@@ -1,5 +1,5 @@
 const express = require('express');
-const ComplexPackage = require('./src/complex-package.json');
+const ComplexPackage = require('./complex-package.json');
 const axios = require('axios');
 const path = require('path');
 var cors = require('cors');
@@ -29,11 +29,10 @@ async function grabDependencyTree (library, version, node= {name: library, versi
         return {[response.data.name]: response.data.version};
     } else {
         const dependencyPromiseArray = [];
-        const {}
         for(const key of Object.keys(response.data.dependencies) {
-            requests.push(grabDependencyTree(key, response.data.dependencies[key]));
+            dependencyPromiseArray.push(grabDependencyTree(key, response.data.dependencies[key]));
         }
-        node.dependencies = await Promise.all(requests);
+        node.dependencies = await Promise.all(dependencyPromiseArray);
     }
     return node
 }
